@@ -1,0 +1,48 @@
+.nextra-body.full {
+  margin: 0 auto;
+}
+
+code {
+  @apply text-sm;
+}
+
+.dark .invert-on-dark {
+  filter: invert(1) brightness(1.8);
+}
+
+.nextra-toc-meta {
+  display: none;
+}
+
+code {
+  font-family: "Menlo", PT Mono,Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace !important;
+}
+
+.dark p, .dark ol, .dark li {
+  color: #e3e3e3;
+}
+
+iframe {
+  border-radius: 7px;
+  margin: 2em 0;
+}
+
+p > strong {
+ color: #FF42A1;
+}
+
+.nextra-sidebar-menu {
+  box-shadow: none !important;
+}
+
+.dark .nextra-sidebar-menu > div {
+  background: black !important;
+}
+
+.light .nextra-sidebar-menu > div {
+  background: white !important;
+}
+
+a > h1 {
+  font-weight: 500;
+}
