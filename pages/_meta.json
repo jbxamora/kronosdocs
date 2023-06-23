@@ -1,7 +1,7 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "web": "💻 | Web Development",
+  "aiml": "🤖 | AI/ML",
   "about": {
     "title": "About",
     "type": "page"

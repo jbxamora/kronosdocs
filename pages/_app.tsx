@@ -1,11 +1,9 @@
 import "../styles.css";
-import "nextra-theme-docs/style.css";
+import "nextra-theme-docs/style.css"
 import "../custom.css";
 
-import type { AppProps } from "next/app";
+export default function Nextra({ Component, pageProps }) {
+  const getLayout = Component.getLayout || ((page) => page);
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return getLayout( <Component {...pageProps} />);
 }
-
-export default MyApp;

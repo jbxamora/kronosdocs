@@ -11,7 +11,7 @@ const useDark = () => {
   }, [resolvedTheme]);
   return isDark;
 };
-/** @type import('nextra-theme-docs').DocsThemeConfig */
+/* @type import('nextra-theme-docs').DocsThemeConfig */
 const theme = {
   project: {
     link: "https://github.com/jbxamora/kronosdocs",
@@ -21,9 +21,6 @@ const theme = {
   },
   feedback: {
     content: "Question? Give me feedback →",
-  },
-  toc: {
-    float: true,
   },
   docsRepositoryBase: "https://github.com/jbxamora/kronosdocs/tree/main",
   useNextSeoProps() {
@@ -40,7 +37,7 @@ const theme = {
           src={`/logo${isDark ? "-dark" : ""}.png`}
           alt="Kronos Logo"
         />
-        <span className="w-full font-bold pl-2">Kronos</span>
+        <span>Kronos</span>
       </>
     );
   },
@@ -54,7 +51,7 @@ const theme = {
         <link
           rel="icon"
           href={`/logo${isDark ? "-dark" : ""}.png`}
-          type="image/svg+xml"
+          type="image/png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:type" content="website" />

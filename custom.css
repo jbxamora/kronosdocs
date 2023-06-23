@@ -46,3 +46,12 @@ p > strong {
 a > h1 {
   font-weight: 500;
 }
+
+video {
+  /* border: 2px solid #262626;
+  border-radius: 10px; */
+  width: 100%;
+  margin: 2em 0;
+  /* padding: 0 2em;
+  background: black; */
+}
