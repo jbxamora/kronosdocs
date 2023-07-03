@@ -1,3 +1,5 @@
+import Callout from "../../../components/Callout.tsx"
+
 # Cloudinary Phototographer Portfolio
 
 This template is a professional and customizable image gallery portfolio site built using Next.js, Cloudinary, and Tailwind.
@@ -6,23 +8,27 @@ This template is a professional and customizable image gallery portfolio site bu
 
 Follow these steps to install and set up the template on your local machine:
 
-1. Clone the repository:  
+1. **Clone the repository**
 
 `git clone https://github.com/jbxamora/photoport.git` . 
   
-2. Install Dependencies:  
+2. **Install Dependencies**
   
 `npm i` **or** `npm install`
   
-3. Create a dotenv file with the following lines, and replace `yourcloudinarycloudname`, `yourcloudinaryapikey`, and `yourcloudinaryapisecret` with your Cloudinary account details:
-  
+3. **Create .env file**
+
+<Callout type="info">
+  <b>Remember To </b>: Replace `yourcloudinarycloudname`, `yourcloudinaryapikey`, and `yourcloudinaryapisecret` with your Cloudinary account details
+</Callout>
+
 ```shell
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=yourcloudinarycloudname
 CLOUDINARY_API_KEY=yourcloudinaryapikey
 CLOUDINARY_API_SECRET=yourcloudinaryapisecret
 ```
   
-4. Run the application on your local machine:
+4. **Run the application on your local machine**
   
 `npm run dev`
 

@@ -1,0 +1,72 @@
+# ReverseMicrograd
+My personal take at creating a simple feedforward neural network, using the [**micrograd**](https://github.com/karpathy/micrograd) deep learning library as reference.
+
+## Overview
+The Micrograd library provides a minimalistic, yet powerful, approach to building neural networks from scratch. The library is lightweight, flexible, and user-friendly, allowing you to focus on the core concepts of deep learning.
+
+### Implementation details
+The feedforward neural network I implemented using Micrograd has the following structure:
+
+- **Neuron:** The basic computational unit of the network. Each neuron computes a linear transformation of its inputs, followed by a hyperbolic tangent activation function.
+
+- **Layer:** A group of neurons that operate in parallel.
+
+- **MLP:** The Multi-Layer Perceptron, or MLP, is a sequence of layers. It takes an input, passes it through the layers, and produces an output.
+
+Here is the implementation:
+
+### Simple Feedforward Neural Network
+```python
+ class Neuron:
+  
+  def __init__(self, nin):
+    self.w = [Value(random.uniform(-1,1)) for _ in range(nin)]
+    self.b = Value(random.uniform(-1,1))
+  
+  def __call__(self, x):
+    # w * x + b
+    act = sum((wi*xi for wi, xi in zip(self.w, x)), self.b)
+    out = act.tanh()
+    return out
+  
+  def parameters(self):
+    return self.w + [self.b]
+
+class Layer:
+  
+  def __init__(self, nin, nout):
+    self.neurons = [Neuron(nin) for _ in range(nout)]
+  
+  def __call__(self, x):
+    outs = [n(x) for n in self.neurons]
+    return outs[0] if len(outs) == 1 else outs
+  
+  def parameters(self):
+    return [p for neuron in self.neurons for p in neuron.parameters()]
+
+class MLP:
+  
+  def __init__(self, nin, nouts):
+    sz = [nin] + nouts
+    self.layers = [Layer(sz[i], sz[i+1]) for i in range(len(nouts))]
+  
+  def __call__(self, x):
+    for layer in self.layers:
+      x = layer(x)
+    return x
+  
+  def parameters(self):
+    return [p for layer in self.layers for p in layer.parameters()]
+    ```
+
+### Lessons Learned
+
+During the process of implementing this network, I gained valuable insights into the following areas:
+
+- **Neural Network Fundamentals**: The hands-on experience allowed me to better understand the underlying structure and function of neurons, layers, and the entire network.
+
+- **Gradient-Based Learning**: Micrograd's focus on gradient-based learning helped me deepen my understanding of how neural networks learn from data.
+
+- **Model Debugging and Tuning**: Building a model from scratch has also improved my ability to debug and tune models effectively, by understanding the internals of the computation process.
+
+Check my work in this [repository](https://github.com/jbxamora/reversemicrograd) for more detailed information and context.

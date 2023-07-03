@@ -16,17 +16,26 @@ const theme = {
   project: {
     link: "https://github.com/jbxamora/kronosdocs",
   },
-  editLink: {
-    text: "Edit this page on GitHub!",
-  },
-  feedback: {
-    content: "Question? Give me feedback →",
+  editLink: false,
+  feedback: false,
+  sidebar: {
+    titleComponent({ title, type }) {
+      if (type === "separator") {
+        return <span className="cursor-default">{title}</span>;
+      }
+      return <>{title}</>;
+    },
+    defaultMenuCollapseLevel: 1,
+    toggleButton: true,
   },
   docsRepositoryBase: "https://github.com/jbxamora/kronosdocs/tree/main",
   useNextSeoProps() {
-    return {
-      titleTemplate: "%s | Kronos",
-    };
+    const { asPath } = useRouter();
+    if (asPath !== "/") {
+      return {
+        titleTemplate: "%s – Nextra",
+      };
+    }
   },
   logo: function Logo() {
     const isDark = useDark();

@@ -1,0 +1,64 @@
+import Callout from "../../../components/Callout.tsx"
+
+# Promptpal
+
+Welcome to PromptPal, an AI-powered prompt sharing platform designed to fuel your creative pursuits. This dynamic application, built with Next.js, Google OAuth, and Tailwind CSS, empowers you to create, share, edit and interact with prompts, as well as view user profiles.
+
+Follow these steps to install and set up PromptPal on your local machine:
+
+1. Clone the repository:  
+
+`git clone https://github.com/jbxamora/promptpal.git` . 
+  
+2. Install Dependencies:  
+  
+`npm i` **or** `npm install`
+  
+3. Create dotenv file:
+
+```shell
+GOOGLE_ID=https://console.cloud.google.com/
+GOOGLE_CLIENT_SECRET=https://console.cloud.google.com/
+MONGODB_URL=`yourmongodburl
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=yoursuperdupersecret
+```
+  <Callout type="info">
+  <b>Create Secure Secret </b>: In the terminal type the following command `openssl rand -base64 32` This will output a 32-byte random string, encoded in base64. Ensuring you have a secure `NEXTAUTH_SECRET`
+</Callout>
+
+4. Run on your local machine:
+  
+`npm run dev`
+  
+**Happy Hacking!**
+
+## Key Features
+
+- Create, Share, Edit or Delete Prompts
+- View User Profiles
+- Google OAuth
+- Easy integration
+- Fully Responsive
+
+## Technologies Used
+- React
+- Next13
+- Google OAuth
+- TailwindCSS
+- Bcrypt
+
+## What I Learned
+
+Through the development and deployment of PromptPal, valuable insights and expertise were gained in several key areas:
+
+- **React & Next.js**: The use of React in conjunction with Next.js facilitated the creation of a dynamic, responsive user interface, as well as the implementation of server-side rendering.
+
+- **Google OAuth**: Implementing Google's OAuth 2.0 system for user authentication provided experience in managing secure and streamlined login processes.
+
+- **Tailwind CSS**: Using Tailwind CSS, a utility-first CSS framework, provided a deeper understanding of modern web design practices and the creation of highly customizable, responsive designs.
+
+- **Bcrypt**: Implementing Bcrypt for password hashing and salting enhanced knowledge in the area of web security and data protection.
+
+- **Deployment with Vercel**: The experience of deploying a Next.js app using the Vercel Platform added practical understanding of application deployment and continuous integration processes. More details on deployment can be found in the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
