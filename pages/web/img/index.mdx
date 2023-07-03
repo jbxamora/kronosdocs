@@ -1,36 +1,37 @@
 # Cloudinary Phototographer Portfolio
 
-This template is a plug and play image gallery portfolio site using Next.js, [Cloudinary](https://cloudinary.com), and [Tailwind](https://tailwindcss.com).
+This template is a professional and customizable image gallery portfolio site built using Next.js, Cloudinary, and Tailwind.
 
 ## Installation
 
-Follow these steps to install and set up the Template on your local machine:
+Follow these steps to install and set up the template on your local machine:
 
-Clone the repository:  
+1. Clone the repository:  
 
 `git clone https://github.com/jbxamora/photoport.git` . 
   
-Install Dependencies:  
+2. Install Dependencies:  
   
 `npm i` **or** `npm install`
   
-Create dotenv file with the following lines:
+3. Create a dotenv file with the following lines, and replace `yourcloudinarycloudname`, `yourcloudinaryapikey`, and `yourcloudinaryapisecret` with your Cloudinary account details:
   
-`NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=yourcloudinarycloudname`
+```shell
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=yourcloudinarycloudname
+CLOUDINARY_API_KEY=yourcloudinaryapikey
+CLOUDINARY_API_SECRET=yourcloudinaryapisecret
+```
   
-`CLOUDINARY_API_KEY=yourcloudinaryapikey` 
-    
-`CLOUDINARY_API_SECRET=yourcloudinaryapisecret`
-  
-Run on your local machine:
+4. Run the application on your local machine:
   
 `npm run dev`
 
-This will ensure the app will run with any new Cloudinary account. Please follow the steps below to view how to customize further.
-
+This will ensure the app runs with your Cloudinary account settings. Please follow the steps below to customize the template further.
 ## Cloudinary Setup 
 
-Switching these folder paths will ensure that you can connect your own folders and images.  
+To connect your own folders and images, you need to make the following adjustments in the code:
+
+1. Update the folder paths:
 
 ```js
 export async function getStaticProps() {
@@ -65,8 +66,7 @@ export async function getStaticProps() {
       );
 ```  
 
-Lastly, Make sure to switch out the categories in the Filter component. Keep in mind when creating your folders that it is case sensitive.  
-
+2. Adjust the categories in the Filter component. Please note that the folder names are case-sensitive:
 
 ```js
 <Filter
@@ -83,25 +83,24 @@ Lastly, Make sure to switch out the categories in the Filter component. Keep in 
 
 ## What I Learned
 
-### Next.js
- In this project, it was used to create a seamless user interface that provides an optimal experience across a wide variety of devices. It allowed for both client-side and server-side data fetching, ensuring that the images load quickly and efficiently.
+In the development of this project, I gained valuable insights and expertise in the following technologies:
 
-### Cloudinary
- In this project, it was used to store, optimize, and deliver images for the portfolio. Cloudinary's API allowed for quick and easy fetching of images and its manipulation features were used to ensure the images are displayed in the optimal size and format.
+- **Next.js**: Next.js was instrumental in creating a seamless user interface that delivers an optimal experience across a wide range of devices. Its support for both client-side and server-side data fetching ensured the rapid and efficient loading of images.
 
-### TailwindCSS
- For this project, TailwindCSS was used to create a modern and responsive UI. Its utility-first nature made it incredibly easy to customize the portfolio's design and create a unique look and feel.
+- **Cloudinary**: Cloudinary played a key role in storing, optimizing, and delivering images for the portfolio. By leveraging Cloudinary's API, I could easily fetch images and utilize its powerful manipulation features to ensure optimal display size and format.
 
-### Imagemin
-Imagemin is a module to minify images. It was used in this project to compress the images before they were uploaded to Cloudinary. This step ensured that the image files were as small as possible without losing quality, which helped improve the site's performance.
+- **TailwindCSS**: TailwindCSS was utilized to design a modern and responsive user interface. Its utility-first approach made it straightforward to customize the portfolio's design and achieve a unique look and feel.
 
-### TypeScript
- It was used in this project to ensure type safety and improve tooling. It made the code more readable and maintainable.
+- **Imagemin**: Imagemin, a module for image minification, was employed to compress images before uploading them to Cloudinary. This step significantly reduced image file sizes without sacrificing quality, thereby enhancing the overall performance of the site.
+
+- **TypeScript**: TypeScript was chosen to enhance type safety and improve tooling in the project. Its static typing system made the codebase more readable, maintainable, and less prone to errors.
 
 ## References
+
+Here are some helpful references related to the technologies used in this project:
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Cloudinary API Documentation](https://cloudinary.com/documentation/transformation_reference)
 - [TailwindCSS Documentation](https://tailwindcss.com/docs)
 - [Imagemin on GitHub](https://github.com/imagemin/imagemin)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)

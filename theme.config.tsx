@@ -17,7 +17,7 @@ const theme = {
     link: "https://github.com/jbxamora/kronosdocs",
   },
   editLink: {
-    text: "Edit this page on GitHub",
+    text: "Edit this page on GitHub!",
   },
   feedback: {
     content: "Question? Give me feedback →",
