@@ -19,12 +19,6 @@ const theme = {
   editLink: false,
   feedback: false,
   sidebar: {
-    titleComponent({ title, type }) {
-      if (type === "separator") {
-        return <span className="cursor-default">{title}</span>;
-      }
-      return <>{title}</>;
-    },
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
   },
@@ -33,7 +27,7 @@ const theme = {
     const { asPath } = useRouter();
     if (asPath !== "/") {
       return {
-        titleTemplate: "%s – Nextra",
+        titleTemplate: "%s – Kronos",
       };
     }
   },
@@ -82,13 +76,12 @@ const theme = {
   },
   footer: {
     text: (
-      <span>
-        MIT {new Date().getFullYear()} ©{" "}
-        <a href="https://kronos.earth" target="_blank">
-          Kronos
-        </a>
-        .
-      </span>
+      <div className="flex w-full flex-col items-center sm:items-start">
+        <div></div>
+        <p className="text-xs">
+          © {new Date().getFullYear()} The Kronos Project.
+        </p>
+      </div>
     ),
   },
 };
