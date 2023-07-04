@@ -22,6 +22,10 @@ const theme = {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
   },
+  primaryHue: {
+    darks:175,
+    light:360,
+  },
   docsRepositoryBase: "https://github.com/jbxamora/kronosdocs/tree/main",
   useNextSeoProps() {
     const { asPath } = useRouter();
